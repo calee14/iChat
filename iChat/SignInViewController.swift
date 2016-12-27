@@ -31,7 +31,7 @@ class SignInViewController: UIViewController {
                         print("We tried to create a user.")
                         
                         if error != nil {
-                            print("Hey we have an error: /(error0)")
+                            print("Hey we have an error: \(error)")
                         } else {
                             print("Created User Succesfully")
                             self.performSegue(withIdentifier: "signinsegue", sender: nil)
