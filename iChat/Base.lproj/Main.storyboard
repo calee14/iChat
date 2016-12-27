@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="1769" y="37"/>
         </scene>
-        <!--Pics View Controller-->
+        <!--Pictures View Controller-->
         <scene sceneID="OM6-wm-zCk">
             <objects>
-                <viewController id="8yg-QP-ZdO" customClass="PicsViewController" customModule="iChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8yg-QP-ZdO" customClass="PicturesViewController" customModule="iChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LXb-SH-t1f"/>
                         <viewControllerLayoutGuide type="bottom" id="vkb-kh-mgq"/>
@@ -134,7 +134,7 @@
                                 <rect key="frame" x="167.5" y="350" width="39" height="30"/>
                                 <state key="normal" title="NEXT"/>
                                 <connections>
-                                    <action selector="nextTapped:" destination="8yg-QP-ZdO" eventType="touchUpInside" id="WaJ-bJ-iUI"/>
+                                    <action selector="nextTapped:" destination="8yg-QP-ZdO" eventType="touchUpInside" id="o3f-sc-Jcj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -152,25 +152,25 @@
                     <navigationItem key="navigationItem" id="xAK-K2-uA6">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="8ch-PH-LaT">
                             <connections>
-                                <action selector="cameraTapped:" destination="8yg-QP-ZdO" id="9TX-mb-aWk"/>
+                                <action selector="cameraTapped:" destination="8yg-QP-ZdO" id="IP3-Tl-a8s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descriptionText" destination="IIe-wV-boQ" id="DNV-KN-DZ1"/>
-                        <outlet property="imageView" destination="sw7-BT-8B0" id="WHr-C8-G2v"/>
-                        <outlet property="nextButton" destination="CEu-3K-uY4" id="YST-xF-R2i"/>
-                        <segue destination="jWM-dX-nYh" kind="show" identifier="selectUserSegue" id="PMA-zG-PRt"/>
+                        <outlet property="descriptionTextField" destination="IIe-wV-boQ" id="JVy-vN-MdD"/>
+                        <outlet property="imageView" destination="sw7-BT-8B0" id="osr-gA-7Su"/>
+                        <outlet property="nextButton" destination="CEu-3K-uY4" id="Tjj-ZB-kPd"/>
+                        <segue destination="jWM-dX-nYh" kind="show" identifier="selectUserSegue" id="QGP-0H-Aim"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUz-I9-zHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2580" y="36"/>
         </scene>
-        <!--View Controller-->
+        <!--Select User View Controller-->
         <scene sceneID="ndX-0P-HLV">
             <objects>
-                <viewController id="jWM-dX-nYh" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="jWM-dX-nYh" customClass="SelectUserViewController" customModule="iChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h2w-9B-KRS"/>
                         <viewControllerLayoutGuide type="bottom" id="HIT-uE-APT"/>
@@ -178,8 +178,23 @@
                     <view key="view" contentMode="scaleToFill" id="yXi-Uy-Q3c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g8X-KP-dtP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g8X-KP-dtP" firstAttribute="top" secondItem="h2w-9B-KRS" secondAttribute="bottom" id="41G-jn-Gup"/>
+                            <constraint firstItem="g8X-KP-dtP" firstAttribute="leading" secondItem="yXi-Uy-Q3c" secondAttribute="leading" id="Exn-8a-daV"/>
+                            <constraint firstAttribute="trailing" secondItem="g8X-KP-dtP" secondAttribute="trailing" id="nDg-XM-8bP"/>
+                            <constraint firstItem="HIT-uE-APT" firstAttribute="top" secondItem="g8X-KP-dtP" secondAttribute="bottom" id="oCV-KA-m47"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="g8X-KP-dtP" id="xsH-er-WAR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3W-Kb-hDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
