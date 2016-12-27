@@ -26,8 +26,21 @@ class SignInViewController: UIViewController {
             print("We tried to sign in")
                 if (error != nil) {
                     print("Hey we have an error:\(error)")
+                    
+                    FIRAuth.auth()?.createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
+                        print("We tried to create a user.")
+                        
+                        if error != nil {
+                            print("Hey we have an error: /(error0)")
+                        } else {
+                            print("Created User Succesfully")
+                            self.performSegue(withIdentifier: "signinsegue", sender: nil)
+                        }
+                    })
+                    
                 } else {
                     print("Signed In Succesfully")
+                    self.performSegue(withIdentifier: "signinsegue", sender: nil)
                 }
         })
     }
