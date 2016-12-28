@@ -25,7 +25,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         FIRDatabase.database().reference().child("users").observe(FIRDataEventType.childAdded, with: {(snapshot) in
         print(snapshot)
         let user = User()
-        //user.email = snapshot.value(forKeyPath: "email") as! String <----- Something wrong with it
+        //user.email = snapshot.value(forKeyPath: "email") as! String <-- Can't List Emails Something went wrong
         user.uid = snapshot.key
             
         self.users.append(user)
