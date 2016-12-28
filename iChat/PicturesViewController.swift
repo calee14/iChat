@@ -66,8 +66,8 @@ class PicturesViewController: UIViewController, UIImagePickerControllerDelegate,
         })
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    return
+//    }
     
 }
