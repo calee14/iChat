@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="18" y="116"/>
         </scene>
-        <!--Chats View Controller-->
+        <!--Home-->
         <scene sceneID="rcm-cL-CdY">
             <objects>
-                <viewController id="pDg-qa-Upq" customClass="ChatsViewController" customModule="iChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="pDg-qa-Upq" customClass="ChatsViewController" customModule="iChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aOU-qs-2ik"/>
                         <viewControllerLayoutGuide type="bottom" id="uiG-62-63l"/>
@@ -85,9 +85,21 @@
                     <view key="view" contentMode="scaleToFill" id="YzN-3K-RAx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R0q-29-Ox1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uiG-62-63l" firstAttribute="top" secondItem="R0q-29-Ox1" secondAttribute="bottom" id="GHC-EO-cLV"/>
+                            <constraint firstItem="R0q-29-Ox1" firstAttribute="top" secondItem="aOU-qs-2ik" secondAttribute="bottom" id="Wae-Xy-P5P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R0q-29-Ox1" secondAttribute="trailing" constant="-16" id="We6-kn-Opw"/>
+                            <constraint firstItem="R0q-29-Ox1" firstAttribute="leading" secondItem="YzN-3K-RAx" secondAttribute="leadingMargin" constant="-16" id="rCy-0k-Lbh"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6pc-KO-oNx">
+                    <navigationItem key="navigationItem" title="Home" id="6pc-KO-oNx">
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="g5k-dM-iTx">
                             <connections>
                                 <action selector="logOutTapped:" destination="pDg-qa-Upq" id="5B5-DS-9Se"/>
@@ -99,12 +111,16 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="R0q-29-Ox1" id="Y3k-Xi-IkR"/>
+                        <segue destination="XrF-4n-6Ih" kind="show" identifier="viewsnapsegue" id="tIf-22-ctO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehH-7V-MCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1769" y="37"/>
+            <point key="canvasLocation" x="1768.8" y="36.431784107946029"/>
         </scene>
-        <!--Pictures View Controller-->
+        <!--TakeAPic-->
         <scene sceneID="OM6-wm-zCk">
             <objects>
                 <viewController id="8yg-QP-ZdO" customClass="PicturesViewController" customModule="iChat" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,7 +165,7 @@
                             <constraint firstItem="IIe-wV-boQ" firstAttribute="top" secondItem="sw7-BT-8B0" secondAttribute="bottom" constant="15" id="nO3-S3-7ot"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xAK-K2-uA6">
+                    <navigationItem key="navigationItem" title="TakeAPic" id="xAK-K2-uA6">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="8ch-PH-LaT">
                             <connections>
                                 <action selector="cameraTapped:" destination="8yg-QP-ZdO" id="IP3-Tl-a8s"/>
@@ -217,6 +233,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edP-DW-Mni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="854" y="36"/>
+        </scene>
+        <!--View Snap View Controller-->
+        <scene sceneID="BcC-it-2Ux">
+            <objects>
+                <viewController id="XrF-4n-6Ih" customClass="ViewSnapViewController" customModule="iChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vb5-yd-JBY"/>
+                        <viewControllerLayoutGuide type="bottom" id="7jI-hq-Lw1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uLn-cQ-8fd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is me saying hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XW1-bQ-Zip">
+                                <rect key="frame" x="21" y="636" width="333" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zm2-lO-WsG">
+                                <rect key="frame" x="26" y="74" width="323" height="552"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zm2-lO-WsG" secondAttribute="trailing" constant="10" id="4hS-5I-x6H"/>
+                            <constraint firstItem="Zm2-lO-WsG" firstAttribute="leading" secondItem="uLn-cQ-8fd" secondAttribute="leadingMargin" constant="10" id="7kA-jw-1f8"/>
+                            <constraint firstItem="XW1-bQ-Zip" firstAttribute="top" secondItem="Zm2-lO-WsG" secondAttribute="bottom" constant="10" id="Ad8-WL-K62"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XW1-bQ-Zip" secondAttribute="trailing" constant="5" id="DY9-pr-u5J"/>
+                            <constraint firstItem="XW1-bQ-Zip" firstAttribute="leading" secondItem="uLn-cQ-8fd" secondAttribute="leadingMargin" constant="5" id="JRW-lu-tkd"/>
+                            <constraint firstItem="7jI-hq-Lw1" firstAttribute="top" secondItem="XW1-bQ-Zip" secondAttribute="bottom" constant="10" id="RC2-BU-Zf5"/>
+                            <constraint firstItem="Zm2-lO-WsG" firstAttribute="top" secondItem="vb5-yd-JBY" secondAttribute="bottom" constant="10" id="gID-bX-eBu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Zm2-lO-WsG" id="ex3-7b-eTr"/>
+                        <outlet property="label" destination="XW1-bQ-Zip" id="PrW-Q7-U9C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8FX-AX-hE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769" y="882"/>
         </scene>
     </scenes>
 </document>

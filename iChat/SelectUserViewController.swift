@@ -15,6 +15,9 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var tableView: UITableView!
     
     var users : [User] = []
+    var imageURL = ""
+    var descript = ""
+    var uuid = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +26,16 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         self.tableView.delegate = self
         
         FIRDatabase.database().reference().child("users").observe(FIRDataEventType.childAdded, with: {(snapshot) in
-        print(snapshot)
-        let user = User()
-        //user.email = snapshot.value(forKeyPath: "email") as! String <-- Can't List Emails Something went wrong
-        user.uid = snapshot.key
+            print(snapshot)
+            print(snapshot.value)
             
-        self.users.append(user)
-        self.tableView.reloadData()
+            let user = User()
+            user.email = (snapshot.value as! NSDictionary)["email"] as! String
+            user.uid = snapshot.key
+            
+            self.users.append(user)
+            
+            self.tableView.reloadData()
         })
     }
     
@@ -45,6 +51,17 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         cell.textLabel?.text = user.email
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let user = users[indexPath.row]
+        
+        let snap = ["from": user.email, "description": descript, "imageURL": imageURL , "uuid": uuid]
+        
+        FIRDatabase.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
+        
+        navigationController!.popToRootViewController(animated: true)
     }
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B356DF8D1E16DE2300072FE6 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356DF8C1E16DE2300072FE6 /* Snap.swift */; };
+		B356DF8F1E1739C300072FE6 /* ViewSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356DF8E1E1739C300072FE6 /* ViewSnapViewController.swift */; };
 		B3CB370F1DFE10B30028190A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CB370E1DFE10B30028190A /* AppDelegate.swift */; };
 		B3CB37111DFE10B30028190A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CB37101DFE10B30028190A /* SignInViewController.swift */; };
 		B3CB37141DFE10B30028190A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CB37121DFE10B30028190A /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		96862AE97A58D5A23EE6EE25 /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
+		B356DF8C1E16DE2300072FE6 /* Snap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
+		B356DF8E1E1739C300072FE6 /* ViewSnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSnapViewController.swift; sourceTree = "<group>"; };
 		B3CB370B1DFE10B30028190A /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CB370E1DFE10B30028190A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3CB37101DFE10B30028190A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -90,8 +94,8 @@
 			children = (
 				B3DEA05B1E13866B00578C68 /* ViewControllers */,
 				B3DEA05C1E13868600578C68 /* Models */,
-				B3CB370E1DFE10B30028190A /* AppDelegate.swift */,
 				B3CB37121DFE10B30028190A /* Main.storyboard */,
+				B3CB370E1DFE10B30028190A /* AppDelegate.swift */,
 				B3CB37151DFE10B30028190A /* Assets.xcassets */,
 				B3CB37171DFE10B30028190A /* LaunchScreen.storyboard */,
 				B3CB371A1DFE10B30028190A /* Info.plist */,
@@ -107,6 +111,7 @@
 				B3DEA04F1E12D19700578C68 /* ChatsViewController.swift */,
 				B3DEA0551E12F37400578C68 /* PicturesViewController.swift */,
 				B3DEA0571E13022400578C68 /* SelectUserViewController.swift */,
+				B356DF8E1E1739C300072FE6 /* ViewSnapViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				B3DEA0591E13861800578C68 /* User.swift */,
+				B356DF8C1E16DE2300072FE6 /* Snap.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -246,7 +252,9 @@
 				B3CB37111DFE10B30028190A /* SignInViewController.swift in Sources */,
 				B3DEA0561E12F37400578C68 /* PicturesViewController.swift in Sources */,
 				B3DEA05A1E13861800578C68 /* User.swift in Sources */,
+				B356DF8F1E1739C300072FE6 /* ViewSnapViewController.swift in Sources */,
 				B3DEA0581E13022400578C68 /* SelectUserViewController.swift in Sources */,
+				B356DF8D1E16DE2300072FE6 /* Snap.swift in Sources */,
 				B3DEA0501E12D19700578C68 /* ChatsViewController.swift in Sources */,
 				B3CB370F1DFE10B30028190A /* AppDelegate.swift in Sources */,
 			);
