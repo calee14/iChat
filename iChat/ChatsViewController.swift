@@ -14,9 +14,16 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     var snaps : [Snap] = []
+    
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.red
+        
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.25, green:0.88, blue:0.82, alpha:1.0)
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -55,17 +62,35 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         })
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return snaps.count
+        if snaps.count == 0 {
+            return 1
+        } else {
+            return snaps.count
+        }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
+        cell.backgroundColor = UIColor.clear
+        
+        cell.textLabel?.textColor = UIColor.white
+        if snaps.count == 0 {
+            cell.textLabel?.text = "You have no chats 😢 😫 🖕"
+        } else {
+
         let snap = snaps[indexPath.row]
         
         cell.textLabel?.text = snap.from
+            
+        }
         
         return cell
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -73,16 +98,19 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         performSegue(withIdentifier: "viewsnapsegue", sender: snap)
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "viewsnapsegue" {
         let nextVC = segue.destination as! ViewSnapViewController
         nextVC.snap = sender as! Snap
+
         }
     }
     
     @IBAction func logOutTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+
     
     
 }

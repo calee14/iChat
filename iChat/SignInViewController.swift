@@ -18,7 +18,7 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = UIColor(red:0.25, green:0.88, blue:0.82, alpha:1.0)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

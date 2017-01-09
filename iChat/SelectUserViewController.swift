@@ -46,6 +46,9 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
+        cell.textLabel?.textColor = UIColor.white
+        
+        cell.backgroundColor = UIColor.clear
         let user = users[indexPath.row]
         
         cell.textLabel?.text = user.email
@@ -57,7 +60,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         
         let user = users[indexPath.row]
         
-        let snap = ["from": user.email, "description": descript, "imageURL": imageURL , "uuid": uuid]
+        let snap = ["from": FIRAuth.auth()!.currentUser!.email!, "description": descript, "imageURL": imageURL , "uuid": uuid]
         
         FIRDatabase.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
         
