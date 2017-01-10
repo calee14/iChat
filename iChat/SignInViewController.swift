@@ -18,10 +18,15 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         self.view.backgroundColor = UIColor(red:0.25, green:0.88, blue:0.82, alpha:1.0)
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    @IBAction func gameTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "gamesegue", sender: nil)
+    }
+    
     @IBAction func turnUpTapped(_ sender: Any) {
         FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion:
             { (user, error) in

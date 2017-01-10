@@ -23,20 +23,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXa-W6-P5V">
-                                <rect key="frame" x="124" y="69" width="127" height="67"/>
+                                <rect key="frame" x="124" y="113" width="127" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="shadowColor" red="0.37565102970000003" green="0.61329228449999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="caplee1000@gmail.com" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecR-VJ-Lfk">
-                                <rect key="frame" x="87" y="216" width="200" height="30"/>
+                                <rect key="frame" x="87" y="260" width="200" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWD-Iy-6xw">
-                                <rect key="frame" x="146" y="347" width="82" height="40"/>
+                                <rect key="frame" x="146" y="391" width="82" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Turn Up"/>
                                 <connections>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="purple" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vt3-Am-XTH">
-                                <rect key="frame" x="87" y="269" width="200" height="30"/>
+                                <rect key="frame" x="87" y="313" width="200" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -66,6 +66,7 @@
                             <constraint firstItem="Vt3-Am-XTH" firstAttribute="top" secondItem="ecR-VJ-Lfk" secondAttribute="bottom" constant="23" id="zvr-SQ-1UF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nTN-hG-WuS"/>
                     <connections>
                         <outlet property="emailTextField" destination="ecR-VJ-Lfk" id="sgS-BF-2AL"/>
                         <outlet property="passwordTextField" destination="Vt3-Am-XTH" id="sRe-cc-Qyd"/>
@@ -74,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18" y="116"/>
+            <point key="canvasLocation" x="16.800000000000001" y="115.59220389805098"/>
         </scene>
         <!--Home-->
         <scene sceneID="rcm-cL-CdY">
@@ -168,6 +169,16 @@
                                     <action selector="nextTapped:" destination="8yg-QP-ZdO" eventType="touchUpInside" id="o3f-sc-Jcj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Li-va-Q0j">
+                                <rect key="frame" x="37.5" y="90" width="300" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="c4Z-1P-uG5"/>
+                                    <constraint firstAttribute="height" constant="35" id="wwn-8I-q2u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.28778481480000001" green="0.62086850400000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -177,8 +188,10 @@
                             <constraint firstItem="IIe-wV-boQ" firstAttribute="width" secondItem="sw7-BT-8B0" secondAttribute="width" id="FcV-h1-RfW"/>
                             <constraint firstItem="CEu-3K-uY4" firstAttribute="top" secondItem="IIe-wV-boQ" secondAttribute="bottom" constant="23" id="Lh6-NG-pPQ"/>
                             <constraint firstItem="sw7-BT-8B0" firstAttribute="top" secondItem="LXb-SH-t1f" secondAttribute="bottom" constant="90" id="VEe-1u-ohq"/>
+                            <constraint firstItem="9Li-va-Q0j" firstAttribute="top" secondItem="LXb-SH-t1f" secondAttribute="bottom" constant="26" id="apc-Ai-9ln"/>
                             <constraint firstItem="CEu-3K-uY4" firstAttribute="centerX" secondItem="PA0-dU-2wc" secondAttribute="centerX" id="kxX-3K-wob"/>
                             <constraint firstItem="IIe-wV-boQ" firstAttribute="top" secondItem="sw7-BT-8B0" secondAttribute="bottom" constant="15" id="nO3-S3-7ot"/>
+                            <constraint firstItem="9Li-va-Q0j" firstAttribute="centerX" secondItem="PA0-dU-2wc" secondAttribute="centerX" id="s7Y-Ss-aRD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TakeAPic" id="xAK-K2-uA6">
@@ -191,6 +204,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextField" destination="IIe-wV-boQ" id="JVy-vN-MdD"/>
+                        <outlet property="funFactText" destination="9Li-va-Q0j" id="ysS-MR-iPA"/>
                         <outlet property="imageView" destination="sw7-BT-8B0" id="osr-gA-7Su"/>
                         <outlet property="nextButton" destination="CEu-3K-uY4" id="Tjj-ZB-kPd"/>
                         <segue destination="jWM-dX-nYh" kind="show" identifier="selectUserSegue" id="QGP-0H-Aim"/>
