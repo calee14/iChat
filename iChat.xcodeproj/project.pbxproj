@@ -19,6 +19,7 @@
 		B3DEA0561E12F37400578C68 /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DEA0551E12F37400578C68 /* PicturesViewController.swift */; };
 		B3DEA0581E13022400578C68 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DEA0571E13022400578C68 /* SelectUserViewController.swift */; };
 		B3DEA05A1E13861800578C68 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DEA0591E13861800578C68 /* User.swift */; };
+		B3E13AC21E2C072A00A1D7A5 /* Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E13AC11E2C072A00A1D7A5 /* Arrays.swift */; };
 		B921F3AAFB49A368DCDB6F54 /* Pods_iChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E6DDC5D50CE0B8D857B255 /* Pods_iChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		B3DEA0551E12F37400578C68 /* PicturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
 		B3DEA0571E13022400578C68 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		B3DEA0591E13861800578C68 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B3E13AC11E2C072A00A1D7A5 /* Arrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrays.swift; sourceTree = "<group>"; };
 		B7E6DDC5D50CE0B8D857B255 /* Pods_iChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E239562FACE7169CFD455644 /* Pods-iChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-iChat/Pods-iChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 			children = (
 				B3DEA0591E13861800578C68 /* User.swift */,
 				B356DF8C1E16DE2300072FE6 /* Snap.swift */,
+				B3E13AC11E2C072A00A1D7A5 /* Arrays.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				B3DEA0561E12F37400578C68 /* PicturesViewController.swift in Sources */,
 				B3DEA05A1E13861800578C68 /* User.swift in Sources */,
 				B356DF8F1E1739C300072FE6 /* ViewSnapViewController.swift in Sources */,
+				B3E13AC21E2C072A00A1D7A5 /* Arrays.swift in Sources */,
 				B3DEA0581E13022400578C68 /* SelectUserViewController.swift in Sources */,
 				B356DF8D1E16DE2300072FE6 /* Snap.swift in Sources */,
 				B3DEA0501E12D19700578C68 /* ChatsViewController.swift in Sources */,
