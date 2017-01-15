@@ -20,8 +20,6 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.red
-        
         navigationController?.navigationBar.barTintColor = UIColor(red:0.25, green:0.88, blue:0.82, alpha:1.0)
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
