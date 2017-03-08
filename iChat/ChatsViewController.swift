@@ -78,7 +78,7 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         cell.textLabel?.textColor = UIColor.white
         if snaps.count == 0 {
-            cell.textLabel?.text = "You have no chats 😢 😫 🖕"
+            cell.textLabel?.text = "You have no chats 😢 😫 ✌️"
         } else {
 
         let snap = snaps[indexPath.row]

@@ -30,7 +30,7 @@
                                 <color key="shadowColor" red="0.37565102970000003" green="0.61329228449999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="0.0" height="-4"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="clee1037@aol.com" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecR-VJ-Lfk">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="caplee1000@gmail.com" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecR-VJ-Lfk">
                                 <rect key="frame" x="87" y="219" width="200" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -44,11 +44,11 @@
                                     <action selector="turnUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="btJ-nR-7y9"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="222222" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vt3-Am-XTH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="purple" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vt3-Am-XTH">
                                 <rect key="frame" x="87" y="272" width="200" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -91,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R0q-29-Ox1">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="-4" y="64" width="383" height="603"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -104,8 +104,8 @@
                         <constraints>
                             <constraint firstItem="uiG-62-63l" firstAttribute="top" secondItem="R0q-29-Ox1" secondAttribute="bottom" id="GHC-EO-cLV"/>
                             <constraint firstItem="R0q-29-Ox1" firstAttribute="top" secondItem="aOU-qs-2ik" secondAttribute="bottom" id="Wae-Xy-P5P"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="R0q-29-Ox1" secondAttribute="trailing" constant="-16" id="We6-kn-Opw"/>
-                            <constraint firstItem="R0q-29-Ox1" firstAttribute="leading" secondItem="YzN-3K-RAx" secondAttribute="leadingMargin" constant="-16" id="rCy-0k-Lbh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R0q-29-Ox1" secondAttribute="trailing" constant="-20" id="We6-kn-Opw"/>
+                            <constraint firstItem="R0q-29-Ox1" firstAttribute="leading" secondItem="YzN-3K-RAx" secondAttribute="leadingMargin" constant="-20" id="rCy-0k-Lbh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="6pc-KO-oNx">

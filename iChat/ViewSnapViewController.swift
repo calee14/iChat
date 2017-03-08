@@ -19,7 +19,9 @@ class ViewSnapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        label.adjustsFontSizeToFitWidth = true
+        
         label.text = snap.descript
         
         imageView.sd_setImage(with: URL(string: snap.imageURL))

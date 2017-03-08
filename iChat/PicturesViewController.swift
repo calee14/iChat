@@ -23,19 +23,29 @@ class PicturesViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+        
         imagePicker.delegate = self
         nextButton.isEnabled = false
+        
         let hi = Arrays()
-        let x = arc4random_uniform(42)
+        let x = arc4random_uniform(115)
         
         //check # of fun facts
-        for i in 0...42 {
+        for i in 0...115 {
             print(hi.funArrays[i])
         }
         
         funFactText.adjustsFontSizeToFitWidth = true
         funFactText.text = hi.funArrays[Int(x)]
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

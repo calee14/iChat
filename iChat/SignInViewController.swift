@@ -16,15 +16,22 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         self.view.backgroundColor = UIColor(red:0.25, green:0.88, blue:0.82, alpha:1.0)
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBAction func gameTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "gamesegue", sender: nil)
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     @IBAction func turnUpTapped(_ sender: Any) {
